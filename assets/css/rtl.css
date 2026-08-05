@@ -1,0 +1,25 @@
+html[dir="rtl"] {
+  text-align: right;
+}
+
+/* Basic utility overrides for RTL */
+html[dir="rtl"] .ml-auto { margin-right: auto !important; margin-left: 0 !important; }
+html[dir="rtl"] .mr-auto { margin-left: auto !important; margin-right: 0 !important; }
+html[dir="rtl"] .pl-4 { padding-right: 1rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .pr-4 { padding-left: 1rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .left-0 { right: 0 !important; left: auto !important; }
+html[dir="rtl"] .right-0 { left: 0 !important; right: auto !important; }
+
+/* Swiper RTL support */
+html[dir="rtl"] .swiper-button-next { right: auto; left: 10px; transform: rotate(180deg); }
+html[dir="rtl"] .swiper-button-prev { left: auto; right: 10px; transform: rotate(180deg); }
+
+/* Icons that should flip in RTL (like arrows) */
+html[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+/* Force correct translation for offcanvas menu in RTL to prevent FOUC */
+html[dir="rtl"] #mobile-menu.translate-x-full {
+  transform: translateX(-100%) !important;
+}

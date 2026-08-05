@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;430;450;500;520;540;560;580&display=swap');
+
+:root {
+  --color-primary: #C85A48;
+  --color-secondary: #F5EBE1;
+  --color-accent: #788E7B;
+  
+  --color-white: #FFFFFF;
+  --color-dark: #2A2421;
+  --color-muted: #8B8276;
+  --color-border: #E8DED3;
+  
+  --color-dark-bg: #1F1B18;
+  --color-dark-card: #2C2621;
+  --color-dark-text: #F4EFEA;
+
+  --font-family: 'Inter', sans-serif;
+}
+
+/* Typography Constraints */
+body h1, body .h1 { font-weight: 580; font-size: clamp(72px, 5vw, 96px); line-height: 1.1; }
+body h2, body .h2 { font-weight: 560; font-size: clamp(48px, 4vw, 72px); line-height: 1.15; }
+body h3, body .h3 { font-weight: 540; font-size: clamp(32px, 3vw, 48px); line-height: 1.2; }
+body h4, body .h4 { font-weight: 520; font-size: clamp(24px, 2vw, 32px); line-height: 1.3; }
+body h5, body .h5 { font-weight: 520; font-size: clamp(20px, 1.8vw, 24px); line-height: 1.4; }
+body h6, body .h6 { font-weight: 600; font-size: clamp(16px, 1.5vw, 18px); line-height: 1.5; text-transform: uppercase; letter-spacing: 0.05em; }
+body p, body .p { font-weight: 400; font-size: clamp(14px, 1.5vw, 19px); line-height: 1.6; }
+body .lead { font-weight: 500; font-size: clamp(18px, 1.8vw, 24px); line-height: 1.5; }
+button, .btn { font-weight: 520; }
+label { font-weight: 500; }
+caption { font-weight: 400; }
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-dark);
+  background-color: var(--color-white);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 9999px; /* Fully rounded */
+  padding: 16px 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  box-shadow: 0 8px 24px rgba(192, 86, 64, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-dark);
+  border-radius: 9999px;
+  padding: 16px 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-dark);
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* Layout Utilities */
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Hover Effects */
+.hover-fabric-lift {
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.hover-fabric-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.hover-image-scale img {
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.hover-image-scale:hover img {
+  transform: scale(1.05);
+}
+
+/* Image Rules */
+img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Base sections padding */
+section {
+  padding: 120px 0;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  section { padding: 80px 0; }
+}
+
+/* Hide scrollbar for clean aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-secondary); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary); 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dark); 
+}

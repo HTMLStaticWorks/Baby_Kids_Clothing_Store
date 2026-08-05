@@ -1,0 +1,49 @@
+html.dark {
+  --color-dark: #FFFFFF;
+  --color-white: #14181E;
+  --color-border: #2C353D;
+  --color-secondary: #1A1F26; /* Darker secondary for background sections */
+  background-color: var(--color-white);
+  color: var(--color-dark);
+}
+
+html.dark body {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+}
+
+/* Card components in dark mode */
+/* html.dark .bg-white {
+  background-color: var(--color-dark-card) !important;
+} */
+
+html.dark .border-gray-200 {
+  border-color: var(--color-border) !important;
+}
+
+/* Text in dark mode */
+html.dark .text-gray-900 {
+  color: #FFFFFF !important;
+}
+
+/* html.dark .text-gray-600, 
+html.dark p, 
+html.dark .text-muted {
+  color: var(--color-muted) !important;
+} */
+
+/* Buttons in dark mode */
+html.dark .btn-secondary {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+html.dark .btn-secondary:hover {
+  background-color: #FFFFFF;
+  color: var(--color-dark-bg);
+}
+
+/* Navbar in dark mode */
+html.dark nav {
+  background-color: rgba(20, 24, 30, 0.8) !important; /* blurry dark background */
+}

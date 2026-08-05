@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Baby & Kids Clothing Store</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+    <meta name="description" content="Shop premium clothing thoughtfully designed for babies and children.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css?v=1785908019">
+    <link rel="stylesheet" href="assets/css/dark-mode.css?v=1785908019">
+    <link rel="stylesheet" href="assets/css/rtl.css?v=1785908019">
+    
+    <!-- Tailwind CSS (Play CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C85A48',
+                        secondary: '#F5EBE1',
+                        accent: '#788E7B',
+                        dark: '#2A2421',
+                        muted: '#8B8276',
+                        border: '#E8DED3',
+                        darkbg: '#1F1B18',
+                        darkcard: '#2A2421',
+                        darktext: '#F5EBE1',
+                        white: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-secondary dark:bg-darkbg text-dark dark:text-darktext transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-secondary dark:bg-darkcard border-b border-border dark:border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 text-2xl font-semibold tracking-wide group">
+                        <svg class="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-7"/><path d="M12 15C8 15 5 11 5 7c0 2 2 4 4 4 2 0 3-1 3-4"/><path d="M12 15c4 0 7-4 7-8 0 2-2 4-4 4-2 0-3-1-3-4"/></svg>
+                        <span>Sprout<span class="text-primary">.</span></span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-8 items-center">
+                    <a href="index.html" class="text-sm font-medium hover:text-primary transition-colors">Home</a>
+                    <a href="home-2.html" class="text-sm font-medium hover:text-primary transition-colors">Home 2</a>
+                    <a href="about.html" class="text-sm font-medium hover:text-primary transition-colors">About</a>
+                    <a href="shop.html" class="text-sm font-medium hover:text-primary transition-colors text-primary">Shop</a>
+                    <a href="lookbook.html" class="text-sm font-medium hover:text-primary transition-colors">Lookbook</a>
+                    <a href="contact.html" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Right Side Icons -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <button class="open-search-btn text-dark dark:text-white hover:text-primary transition-colors">
+                        <svg class="w-5 h-5 rtl-flip pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </button>
+                    <button class="open-cart-btn text-dark dark:text-white hover:text-primary transition-colors relative">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <span class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full h-4 w-4 flex items-center justify-center pointer-events-none shadow-sm">2</span>
+                    </button>
+                    
+                    
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle text-dark dark:text-white hover:text-primary transition-colors">
+                        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    </button>
+                    
+                    <!-- RTL Toggle -->
+                    <button class="rtl-toggle text-sm font-medium text-dark dark:text-white hover:text-primary transition-colors">
+                        RTL
+                    </button>
+                    <a href="login.html" class="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-medium hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 border border-primary hover:bg-transparent hover:text-primary ml-4">Login</a>
+                </div>
+
+                <!-- Hamburger (Mobile) -->
+                <div class="lg:hidden flex items-center space-x-4">
+                    <button id="menu-toggle" class="text-dark dark:text-white p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden opacity-0 transition-opacity duration-300"></div>
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-[320px] bg-secondary dark:bg-darkbg z-[70] transform translate-x-full transition-transform duration-300 shadow-2xl overflow-y-auto">
+        <div class="p-6 flex justify-between items-center border-b border-border dark:border-border">
+            <span class="text-xl font-semibold">Menu</span>
+            <button id="close-menu" class="p-2 text-dark dark:text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div class="p-6 flex flex-col space-y-6 text-start items-start w-full">
+            <a href="index.html" class="text-lg font-medium w-full hover:text-primary transition-colors text-dark dark:text-white">Home</a>
+            <a href="home-2.html" class="text-lg font-medium w-full hover:text-primary transition-colors text-dark dark:text-white">Home 2</a>
+            <a href="about.html" class="text-lg font-medium w-full hover:text-primary transition-colors text-dark dark:text-white">About</a>
+            <a href="shop.html" class="text-lg font-medium w-full hover:text-primary transition-colors text-primary">Shop</a>
+            <a href="lookbook.html" class="text-lg font-medium w-full hover:text-primary transition-colors text-dark dark:text-white">Lookbook</a>
+            <a href="contact.html" class="text-lg font-medium w-full hover:text-primary transition-colors text-dark dark:text-white">Contact</a>
+            
+            <div class="pt-6 border-t border-border dark:border-border flex flex-col space-y-6 w-full mt-auto">
+                <!-- Icons Row -->
+                <div class="flex items-center gap-6">
+                    <button class="open-search-btn text-dark dark:text-white hover:text-primary transition-colors">
+                        <svg class="w-6 h-6 rtl-flip pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </button>
+                    <button class="open-cart-btn text-dark dark:text-white hover:text-primary transition-colors relative">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <span class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full h-4 w-4 flex items-center justify-center pointer-events-none shadow-sm">2</span>
+                    </button>
+                    <button class="theme-toggle text-dark dark:text-white hover:text-primary transition-colors">
+                        <svg class="w-6 h-6 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        <svg class="w-6 h-6 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    </button>
+                    <button class="rtl-toggle text-sm font-medium text-dark dark:text-white hover:text-primary transition-colors">
+                        RTL
+                    </button>
+                </div>
+                <a href="login.html" class="btn-primary w-full text-center">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shop Hero Banner -->
+    <section class="pt-32 pb-16 bg-secondary dark:bg-darkcard border-b border-border dark:border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-up">
+            <span class="text-primary font-medium tracking-widest uppercase text-sm mb-4 block">The Boutique</span>
+            <h1 class="mb-4 text-5xl md:text-6xl font-serif">Curated Collection</h1>
+            <p class="text-lg text-muted max-w-2xl mx-auto">Discover our entire range of meticulously crafted children's wear, from newborn essentials to smart school uniforms.</p>
+        </div>
+    </section>
+
+    <!-- Shop Main Layout -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-8">
+                
+                <!-- Filters Sidebar -->
+                <aside class="w-full lg:w-1/4 lg:sticky lg:top-24 h-max">
+                    <div class="bg-white dark:bg-darkcard border border-border dark:border-white/5 rounded-3xl p-6 shadow-sm">
+                        <div class="flex items-center justify-between mb-6 pb-6 border-b border-border dark:border-white/5">
+                            <h4 class="text-xl">Filters</h4>
+                            <button class="text-sm text-primary hover:text-dark dark:hover:text-white transition-colors">Clear All</button>
+                        </div>
+                        
+                        <!-- Filter Groups -->
+                        <div class="space-y-6">
+                            <!-- Category -->
+                            <div>
+                                <h5 class="mb-3 text-base font-semibold">Category</h5>
+                                <div class="space-y-2">
+                                    <label class="flex items-center cursor-pointer group">
+                                        <input type="checkbox" class="rounded border-border text-primary focus:ring-primary dark:bg-darkbg dark:border-white/20">
+                                        <span class="ml-3 text-muted group-hover:text-dark dark:group-hover:text-white transition-colors">New Arrivals</span>
+                                    </label>
+                                    <label class="flex items-center cursor-pointer group">
+                                        <input type="checkbox" class="rounded border-border text-primary focus:ring-primary dark:bg-darkbg dark:border-white/20">
+                                        <span class="ml-3 text-muted group-hover:text-dark dark:group-hover:text-white transition-colors">Best Sellers</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- Age -->
+                            <div>
+                                <h5 class="mb-3 text-base font-semibold">Age Group</h5>
+                                <div class="space-y-2">
+                                    <label class="flex items-center cursor-pointer group">
+                                        <input type="checkbox" class="rounded border-border text-primary focus:ring-primary dark:bg-darkbg dark:border-white/20">
+                                        <span class="ml-3 text-muted group-hover:text-dark dark:group-hover:text-white transition-colors">Newborn</span>
+                                    </label>
+                                    <label class="flex items-center cursor-pointer group">
+                                        <input type="checkbox" class="rounded border-border text-primary focus:ring-primary dark:bg-darkbg dark:border-white/20">
+                                        <span class="ml-3 text-muted group-hover:text-dark dark:group-hover:text-white transition-colors">0-2 Years</span>
+                                    </label>
+                                    <label class="flex items-center cursor-pointer group">
+                                        <input type="checkbox" class="rounded border-border text-primary focus:ring-primary dark:bg-darkbg dark:border-white/20">
+                                        <span class="ml-3 text-muted group-hover:text-dark dark:group-hover:text-white transition-colors">3-5 Years</span>
+                                    </label>
+                                    <label class="flex items-center cursor-pointer group">
+                                        <input type="checkbox" class="rounded border-border text-primary focus:ring-primary dark:bg-darkbg dark:border-white/20">
+                                        <span class="ml-3 text-muted group-hover:text-dark dark:group-hover:text-white transition-colors">6+ Years</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Season -->
+                            <div>
+                                <h5 class="mb-3 text-base font-semibold">Season</h5>
+                                <div class="space-y-2">
+                                    <label class="flex items-center cursor-pointer group">
+                                        <input type="checkbox" class="rounded border-border text-primary focus:ring-primary dark:bg-darkbg dark:border-white/20">
+                                        <span class="ml-3 text-muted group-hover:text-dark dark:group-hover:text-white transition-colors">Spring / Summer</span>
+                                    </label>
+                                    <label class="flex items-center cursor-pointer group">
+                                        <input type="checkbox" class="rounded border-border text-primary focus:ring-primary dark:bg-darkbg dark:border-white/20">
+                                        <span class="ml-3 text-muted group-hover:text-dark dark:group-hover:text-white transition-colors">Autumn / Winter</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Price -->
+                            <div>
+                                <h5 class="mb-3 text-base font-semibold">Price Range</h5>
+                                <input type="range" min="0" max="200" class="w-full accent-primary">
+                                <div class="flex justify-between text-xs text-muted mt-2">
+                                    <span>$0</span>
+                                    <span>$200+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Product Content -->
+                <main class="w-full lg:w-3/4">
+                    
+                    <!-- Top Bar -->
+                    <div class="flex flex-col md:flex-row justify-between items-center mb-8 pb-4 border-b border-border dark:border-white/5 gap-4">
+                        <span class="text-muted">Showing 8 of 124 products</span>
+                        <div class="flex items-center space-x-6">
+                            <!-- Size Guide Trigger -->
+                            <button id="size-guide-btn" class="flex items-center text-sm font-medium text-dark dark:text-white hover:text-primary transition-colors">
+                                <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                Size Guide
+                            </button>
+                            
+                            <div class="h-4 w-px bg-border dark:bg-white/10 hidden md:block"></div>
+                            
+                            <!-- Sort -->
+                            <div class="flex items-center space-x-2">
+                                <span class="text-sm text-muted">Sort by:</span>
+                                <select class="bg-transparent border-none text-dark dark:text-white font-medium focus:ring-0 cursor-pointer outline-none">
+                                    <option value="featured">Featured</option>
+                                    <option value="newest">Newest Arrivals</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid (8 Products) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-20" id="products">
+                        
+                        <!-- Product 1 -->
+                        <div class="group flex flex-col h-full hover-fabric-lift animate-fade-up bg-[#f6efe9] dark:bg-darkcard rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                            <div class="relative aspect-[3/4] overflow-hidden">
+
+                                <img src="https://images.unsplash.com/photo-1604467794349-0b74285de7e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Organic Linen Romper" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <button class="absolute top-4 right-4 w-10 h-10 bg-secondary/95 dark:bg-darkbg/95 backdrop-blur rounded-full flex items-center justify-center text-dark dark:text-white hover:text-primary transition-colors z-10 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                </button>
+                                <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button class="w-full bg-white text-dark py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-colors text-sm">Add To Cart</button>
+                                </div>
+                                </div>
+                            <div class="flex-grow flex flex-col p-5">
+                                <h5 class="mb-2 text-lg font-medium text-dark dark:text-white">Organic Linen Romper</h5>
+                                <p class="text-muted text-sm mb-4 flex-grow">Newborn - 2 Years</p>
+                                <span class="font-semibold text-xl text-dark dark:text-white">$45.00</span>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="group flex flex-col h-full hover-fabric-lift animate-fade-up bg-[#f6efe9] dark:bg-darkcard rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="animation-delay: 0.1s;">
+                            <div class="relative aspect-[3/4] overflow-hidden">
+
+                                <img src="https://images.unsplash.com/photo-1522771930-78848d9293e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Merino Wool Sweater" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <button class="absolute top-4 right-4 w-10 h-10 bg-secondary/95 dark:bg-darkbg/95 backdrop-blur rounded-full flex items-center justify-center text-dark dark:text-white hover:text-primary transition-colors z-10 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                </button>
+                                <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button class="w-full bg-white text-dark py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-colors text-sm">Add To Cart</button>
+                                </div>
+                                </div>
+                            <div class="flex-grow flex flex-col p-5">
+                                <h5 class="mb-2 text-lg font-medium text-dark dark:text-white">Merino Wool Sweater</h5>
+                                <p class="text-muted text-sm mb-4 flex-grow">3 - 8 Years</p>
+                                <span class="font-semibold text-xl text-dark dark:text-white">$65.00</span>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="group flex flex-col h-full hover-fabric-lift animate-fade-up bg-[#f6efe9] dark:bg-darkcard rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="animation-delay: 0.2s;">
+                            <div class="relative aspect-[3/4] overflow-hidden">
+
+                                <img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cotton Summer Dress" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <button class="absolute top-4 right-4 w-10 h-10 bg-secondary/95 dark:bg-darkbg/95 backdrop-blur rounded-full flex items-center justify-center text-dark dark:text-white hover:text-primary transition-colors z-10 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                </button>
+                                <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button class="w-full bg-white text-dark py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-colors text-sm">Add To Cart</button>
+                                </div>
+                                </div>
+                            <div class="flex-grow flex flex-col p-5">
+                                <h5 class="mb-2 text-lg font-medium text-dark dark:text-white">Cotton Summer Dress</h5>
+                                <p class="text-muted text-sm mb-4 flex-grow">2 - 6 Years</p>
+                                <span class="font-semibold text-xl text-dark dark:text-white">$55.00</span>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="group flex flex-col h-full hover-fabric-lift animate-fade-up bg-[#f6efe9] dark:bg-darkcard rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="animation-delay: 0.3s;">
+                            <div class="relative aspect-[3/4] overflow-hidden">
+
+                                <img src="assets/img/denim2.jpg" alt="Classic Denim Jacket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <button class="absolute top-4 right-4 w-10 h-10 bg-secondary/95 dark:bg-darkbg/95 backdrop-blur rounded-full flex items-center justify-center text-dark dark:text-white hover:text-primary transition-colors z-10 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                </button>
+                                <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button class="w-full bg-white text-dark py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-colors text-sm">Add To Cart</button>
+                                </div>
+                                </div>
+                            <div class="flex-grow flex flex-col p-5">
+                                <h5 class="mb-2 text-lg font-medium text-dark dark:text-white">Classic Denim Jacket</h5>
+                                <p class="text-muted text-sm mb-4 flex-grow">4 - 12 Years</p>
+                                <span class="font-semibold text-xl text-dark dark:text-white">$48.00</span>
+                            </div>
+                        </div>
+
+                        <!-- Product 5 -->
+                        <div class="group flex flex-col h-full hover-fabric-lift animate-fade-up bg-[#f6efe9] dark:bg-darkcard rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                            <div class="relative aspect-[3/4] overflow-hidden">
+
+                                <img src="https://images.unsplash.com/photo-1622290319146-7b63df48a635?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cashmere Cardigan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <button class="absolute top-4 right-4 w-10 h-10 bg-secondary/95 dark:bg-darkbg/95 backdrop-blur rounded-full flex items-center justify-center text-dark dark:text-white hover:text-primary transition-colors z-10 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                </button>
+                                <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button class="w-full bg-white text-dark py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-colors text-sm">Add To Cart</button>
+                                </div>
+                                </div>
+                            <div class="flex-grow flex flex-col p-5">
+                                <h5 class="mb-2 text-lg font-medium text-dark dark:text-white">Cashmere Cardigan</h5>
+                                <p class="text-muted text-sm mb-4 flex-grow">Newborn - 3 Years</p>
+                                <span class="font-semibold text-xl text-dark dark:text-white">$85.00</span>
+                            </div>
+                        </div>
+
+                        <!-- Product 6 -->
+                        <div class="group flex flex-col h-full hover-fabric-lift animate-fade-up bg-[#f6efe9] dark:bg-darkcard rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="animation-delay: 0.1s;">
+                            <div class="relative aspect-[3/4] overflow-hidden">
+
+                                <img src="assets/img/Knitted Beanie.jpg" alt="Knitted Beanie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <button class="absolute top-4 right-4 w-10 h-10 bg-secondary/95 dark:bg-darkbg/95 backdrop-blur rounded-full flex items-center justify-center text-dark dark:text-white hover:text-primary transition-colors z-10 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                </button>
+                                <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button class="w-full bg-white text-dark py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-colors text-sm">Add To Cart</button>
+                                </div>
+                                </div>
+                            <div class="flex-grow flex flex-col p-5">
+                                <h5 class="mb-2 text-lg font-medium text-dark dark:text-white">Knitted Beanie</h5>
+                                <p class="text-muted text-sm mb-4 flex-grow">Accessories</p>
+                                <span class="font-semibold text-xl text-dark dark:text-white">$24.00</span>
+                            </div>
+                        </div>
+
+                        <!-- Product 7 -->
+                        <div class="group flex flex-col h-full hover-fabric-lift animate-fade-up bg-[#f6efe9] dark:bg-darkcard rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="animation-delay: 0.2s;">
+                            <div class="relative aspect-[3/4] overflow-hidden">
+
+                                <img src="assets/img/Crisp Oxford Shirt.jpg" alt="Oxford Shirt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <button class="absolute top-4 right-4 w-10 h-10 bg-secondary/95 dark:bg-darkbg/95 backdrop-blur rounded-full flex items-center justify-center text-dark dark:text-white hover:text-primary transition-colors z-10 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                </button>
+                                <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button class="w-full bg-white text-dark py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-colors text-sm">Add To Cart</button>
+                                </div>
+                                </div>
+                            <div class="flex-grow flex flex-col p-5">
+                                <h5 class="mb-2 text-lg font-medium text-dark dark:text-white">Crisp Oxford Shirt</h5>
+                                <p class="text-muted text-sm mb-4 flex-grow">4 - 12 Years</p>
+                                <span class="font-semibold text-xl text-dark dark:text-white">$38.00</span>
+                            </div>
+                        </div>
+
+                        <!-- Product 8 -->
+                        <div class="group flex flex-col h-full hover-fabric-lift animate-fade-up bg-[#f6efe9] dark:bg-darkcard rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" style="animation-delay: 0.3s;">
+                            <div class="relative aspect-[3/4] overflow-hidden">
+
+                                <img src="assets/img/winterpuffer2.jpg" alt="Puffer Coat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <button class="absolute top-4 right-4 w-10 h-10 bg-secondary/95 dark:bg-darkbg/95 backdrop-blur rounded-full flex items-center justify-center text-dark dark:text-white hover:text-primary transition-colors z-10 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                </button>
+                                <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button class="w-full bg-white text-dark py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-colors text-sm">Add To Cart</button>
+                                </div>
+                                </div>
+                            <div class="flex-grow flex flex-col p-5">
+                                <h5 class="mb-2 text-lg font-medium text-dark dark:text-white">Winter Puffer Coat</h5>
+                                <p class="text-muted text-sm mb-4 flex-grow">2 - 10 Years</p>
+                                <span class="font-semibold text-xl text-dark dark:text-white">$110.00</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <!-- NEW SECTIONS INJECTED INTO SHOP (Ages, Seasons, School, Gifts) -->
+                    
+                    <hr class="border-border dark:border-white/10 my-16">
+                    
+                    <!-- Shop by Age -->
+                    <div id="ages" class="pt-8 mb-24 animate-fade-up">
+                        <h3 class="mb-8 font-serif text-center">Shop by Age</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                            <a href="#" class="block p-6 bg-white shadow-sm dark:bg-darkcard rounded-2xl hover:bg-primary hover:text-white transition-colors group border border-transparent dark:border-white/5 hover:border-primary">
+                                <span class="block text-2xl mb-2 font-medium">NB</span>
+                                <span class="text-sm font-medium">Newborn</span>
+                            </a>
+                            <a href="#" class="block p-6 bg-white shadow-sm dark:bg-darkcard rounded-2xl hover:bg-primary hover:text-white transition-colors group border border-transparent dark:border-white/5 hover:border-primary">
+                                <span class="block text-2xl mb-2 font-medium">0-2</span>
+                                <span class="text-sm font-medium">Toddler</span>
+                            </a>
+                            <a href="#" class="block p-6 bg-white shadow-sm dark:bg-darkcard rounded-2xl hover:bg-primary hover:text-white transition-colors group border border-transparent dark:border-white/5 hover:border-primary">
+                                <span class="block text-2xl mb-2 font-medium">3-5</span>
+                                <span class="text-sm font-medium">Preschool</span>
+                            </a>
+                            <a href="#" class="block p-6 bg-white shadow-sm dark:bg-darkcard rounded-2xl hover:bg-primary hover:text-white transition-colors group border border-transparent dark:border-white/5 hover:border-primary">
+                                <span class="block text-2xl mb-2 font-medium">6-8</span>
+                                <span class="text-sm font-medium">Kids</span>
+                            </a>
+                            <a href="#" class="block p-6 bg-white shadow-sm dark:bg-darkcard rounded-2xl hover:bg-primary hover:text-white transition-colors group border border-transparent dark:border-white/5 hover:border-primary col-span-2 md:col-span-1">
+                                <span class="block text-2xl mb-2 font-medium">9+</span>
+                                <span class="text-sm font-medium">Preteens</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Seasonal Lookbook -->
+                    <div id="seasons" class="pt-8 mb-24 animate-fade-up">
+                        <h3 class="mb-8 font-serif text-center">Seasonal Collections</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="relative h-64 rounded-3xl overflow-hidden group hover-fabric-lift cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Spring/Summer" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                    <h4 class="text-white text-3xl font-serif">Spring & Summer</h4>
+                                </div>
+                            </div>
+                            <div class="relative h-64 rounded-3xl overflow-hidden group hover-fabric-lift cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Autumn/Winter" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                    <h4 class="text-white text-3xl font-serif">Autumn & Winter</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- School Uniforms -->
+                    <div id="school" class="pt-8 mb-24 animate-fade-up">
+                        <div class="bg-primary/5 dark:bg-darkcard rounded-3xl p-8 md:p-12 border border-border dark:border-white/5 flex flex-col md:flex-row items-center gap-8">
+                            <div class="w-full md:w-1/2">
+                                <h3 class="mb-4 font-serif">School Uniforms</h3>
+                                <p class="text-muted mb-6">Durable, stain-resistant, and elegantly crafted uniforms designed for everyday comfort.</p>
+                                <a href="#" class="btn-primary">Shop Uniforms</a>
+                            </div>
+                            <div class="w-full md:w-1/2 rounded-2xl overflow-hidden h-80 md:h-96">
+                                <img src="assets/img/scluniform2.jpg" alt="School Uniform" class="w-full h-full object-cover object-top">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gift Sets -->
+                    <div id="gifts" class="pt-8 mb-16 animate-fade-up">
+                        <h3 class="mb-8 font-serif text-center">Exquisite Gift Sets</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="text-center group hover-fabric-lift cursor-pointer">
+                                <div class="aspect-square rounded-full overflow-hidden mb-4 bg-secondary dark:bg-darkcard border-4 border-transparent hover:border-accent transition-colors">
+                                    <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Newborn Gift" class="w-full h-full object-cover">
+                                </div>
+                                <h5 class="font-medium text-lg">Newborn Welcome</h5>
+                            </div>
+                            <div class="text-center group hover-fabric-lift cursor-pointer">
+                                <div class="aspect-square rounded-full overflow-hidden mb-4 bg-secondary dark:bg-darkcard border-4 border-transparent hover:border-accent transition-colors">
+                                    <img src="https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Birthday Gift" class="w-full h-full object-cover">
+                                </div>
+                                <h5 class="font-medium text-lg">Birthday Special</h5>
+                            </div>
+                            <div class="text-center group hover-fabric-lift cursor-pointer">
+                                <div class="aspect-square rounded-full overflow-hidden mb-4 bg-secondary dark:bg-darkcard border-4 border-transparent hover:border-accent transition-colors">
+                                    <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Luxury Set" class="w-full h-full object-cover">
+                                </div>
+                                <h5 class="font-medium text-lg">Luxury Keepsake</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary dark:bg-darkcard pt-20 pb-10 border-t border-border dark:border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Column 1 -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 text-3xl font-semibold tracking-wide mb-6 group w-fit">
+                        <svg class="w-9 h-9 text-primary group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-7"/><path d="M12 15C8 15 5 11 5 7c0 2 2 4 4 4 2 0 3-1 3-4"/><path d="M12 15c4 0 7-4 7-8 0 2-2 4-4 4-2 0-3-1-3-4"/></svg>
+                        <span>Sprout<span class="text-primary">.</span></span>
+                    </a>
+                    <p class="text-muted mb-6 leading-relaxed text-sm">Crafting beautiful childhood memories through premium fashion, combining comfort, safety, and joyful design.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white dark:bg-darkbg flex items-center justify-center text-dark dark:text-white hover:text-primary transition-colors border border-border dark:border-white/5 shadow-sm">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white dark:bg-darkbg flex items-center justify-center text-dark dark:text-white hover:text-primary transition-colors border border-border dark:border-white/5 shadow-sm">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white dark:bg-darkbg flex items-center justify-center text-dark dark:text-white hover:text-primary transition-colors border border-border dark:border-white/5 shadow-sm">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h5 class="mb-6 font-semibold">Quick Links</h5>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-muted hover:text-primary transition-colors">Our Story</a></li>
+                        <li><a href="shop.html" class="text-muted hover:text-primary transition-colors">Shop All</a></li>
+                        <li><a href="size-guide.html" class="text-muted hover:text-primary transition-colors">Size Guide</a></li>
+                        
+                        <li><a href="contact.html" class="text-muted hover:text-primary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h5 class="mb-6 font-semibold">Collections</h5>
+                    <ul class="space-y-3">
+                        <li><a href="shop.html#ages" class="text-muted hover:text-primary transition-colors">Shop by Age</a></li>
+                        <li><a href="shop.html#seasons" class="text-muted hover:text-primary transition-colors">Seasonal Lookbook</a></li>
+                        <li><a href="shop.html#school" class="text-muted hover:text-primary transition-colors">School Uniforms</a></li>
+                        <li><a href="shop.html#gifts" class="text-muted hover:text-primary transition-colors">Gift Sets</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div>
+                    <h5 class="mb-6 font-semibold">Newsletter</h5>
+                    <p class="text-muted mb-4 text-sm">Subscribe to receive updates, access to exclusive deals, and more.</p>
+                    <form class="flex flex-col space-y-3">
+                        <input type="email" placeholder="Enter your email address" class="px-4 py-3 rounded-xl bg-white dark:bg-darkbg border border-border dark:border-white/10 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors w-full" required>
+                        <button type="submit" class="btn-primary w-full py-3 rounded-xl">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-border dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-muted">
+                <p class="text-xs">&copy; 2026 Sprout. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Size Guide Modal -->
+    <div id="sg-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div id="sg-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 transition-opacity duration-300 cursor-pointer"></div>
+        
+        <div id="sg-content" class="relative bg-white dark:bg-darkbg w-full max-w-4xl rounded-3xl p-8 md:p-12 shadow-2xl opacity-0 scale-95 transition-all duration-300 border border-border dark:border-white/5 z-10 max-h-[90vh] overflow-y-auto">
+            <button id="close-sg" class="absolute top-6 right-6 p-2 text-muted hover:text-primary transition-colors bg-secondary dark:bg-darkcard rounded-full shadow-sm hover:scale-110">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <div class="text-center mb-8">
+                <h3 class="text-3xl font-serif">Size Guide</h3>
+                <p class="text-muted mt-2">Find the perfect fit for your little ones.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Babies -->
+                <div class="bg-secondary/30 dark:bg-darkcard p-6 rounded-2xl border border-border dark:border-white/5">
+                    <h4 class="text-xl font-medium mb-4 text-primary border-b border-border dark:border-white/10 pb-2">Babies (0-24 Months)</h4>
+                    <table class="w-full text-sm text-left">
+                        <thead><tr class="text-muted"><th class="py-2">Size</th><th>Age</th><th>Height</th></tr></thead>
+                        <tbody>
+                            <tr class="border-b border-border/50 dark:border-white/5"><td>50</td><td>0-1M</td><td>up to 50cm</td></tr>
+                            <tr class="border-b border-border/50 dark:border-white/5"><td>56</td><td>1-2M</td><td>51-56cm</td></tr>
+                            <tr class="border-b border-border/50 dark:border-white/5"><td>62</td><td>2-4M</td><td>57-62cm</td></tr>
+                            <tr class="border-b border-border/50 dark:border-white/5"><td>68</td><td>4-6M</td><td>63-68cm</td></tr>
+                            <tr class="border-b border-border/50 dark:border-white/5"><td>74</td><td>6-9M</td><td>69-74cm</td></tr>
+                            <tr><td>80</td><td>9-12M</td><td>75-80cm</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Toddlers -->
+                <div class="bg-secondary/30 dark:bg-darkcard p-6 rounded-2xl border border-border dark:border-white/5">
+                    <h4 class="text-xl font-medium mb-4 text-primary border-b border-border dark:border-white/10 pb-2">Toddlers & Kids</h4>
+                    <table class="w-full text-sm text-left">
+                        <thead><tr class="text-muted"><th class="py-2">Size</th><th>Age</th><th>Height</th></tr></thead>
+                        <tbody>
+                            <tr class="border-b border-border/50 dark:border-white/5"><td>92</td><td>1.5-2Y</td><td>87-92cm</td></tr>
+                            <tr class="border-b border-border/50 dark:border-white/5"><td>98</td><td>2-3Y</td><td>93-98cm</td></tr>
+                            <tr class="border-b border-border/50 dark:border-white/5"><td>104</td><td>3-4Y</td><td>99-104cm</td></tr>
+                            <tr class="border-b border-border/50 dark:border-white/5"><td>116</td><td>5-6Y</td><td>111-116cm</td></tr>
+                            <tr class="border-b border-border/50 dark:border-white/5"><td>128</td><td>7-8Y</td><td>123-128cm</td></tr>
+                            <tr><td>140</td><td>9-10Y</td><td>135-140cm</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <a href="size-guide.html" class="text-primary hover:text-dark dark:hover:text-white transition-colors underline font-medium">View Full Size Guide & Measuring Tips</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js?v=1785908331"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sgBtn = document.getElementById('size-guide-btn');
+            const modal = document.getElementById('sg-modal');
+            const backdrop = document.getElementById('sg-backdrop');
+            const content = document.getElementById('sg-content');
+            const closeBtn = document.getElementById('close-sg');
+
+            function openModal() {
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    backdrop.classList.remove('opacity-0');
+                    content.classList.remove('opacity-0', 'scale-95');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                backdrop.classList.add('opacity-0');
+                content.classList.add('opacity-0', 'scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+
+            if (sgBtn) sgBtn.addEventListener('click', openModal);
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+            if (backdrop) backdrop.addEventListener('click', closeModal);
+        });
+    </script>
+
+
+    <!-- Cart Slide-out / Modal Overlay -->
+    <div id="cartModal" class="fixed inset-0 z-[100] hidden">
+        <!-- Blurred Backdrop -->
+        <div id="cartBackdrop" class="absolute inset-0 bg-dark/40 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+        
+        <!-- Slide-out Panel (Right side) -->
+        <div id="cartPanel" class="absolute top-0 right-0 h-full w-full sm:w-[450px] bg-white dark:bg-darkcard shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col border-l border-border dark:border-white/10">
+            
+            <!-- Header -->
+            <div class="p-8 border-b border-border dark:border-white/10 flex justify-between items-center">
+                <h3 class="text-3xl font-serif text-dark dark:text-white">Your Cart <span class="text-accent">(2)</span></h3>
+                <button id="closeCartBtn" class="text-muted hover:text-primary transition-transform duration-300 hover:rotate-90">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <!-- Cart Items -->
+            <div class="flex-grow p-8 overflow-y-auto space-y-8">
+                <!-- Item 1 -->
+                <div class="flex gap-6 group">
+                    <div class="w-24 h-32 rounded-2xl overflow-hidden bg-secondary dark:bg-darkbg">
+                        <img src="https://images.unsplash.com/photo-1604467794349-0b74285de7e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Item" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="flex-grow flex flex-col justify-between py-1">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <h5 class="font-medium text-lg text-dark dark:text-white">Organic Linen Romper</h5>
+                                <button class="text-muted hover:text-accent transition-colors"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg></button>
+                            </div>
+                            <p class="text-sm text-muted mb-2">Newborn - 2 Years</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <div class="flex items-center border border-border dark:border-white/10 rounded-full px-3 py-1 bg-secondary dark:bg-darkbg">
+                                <button class="text-muted hover:text-primary w-6 text-center text-lg">-</button>
+                                <span class="px-3 text-sm font-medium w-6 text-center">1</span>
+                                <button class="text-muted hover:text-primary w-6 text-center text-lg">+</button>
+                            </div>
+                            <span class="font-semibold text-lg text-dark dark:text-white">$45.00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="flex gap-6 group">
+                    <div class="w-24 h-32 rounded-2xl overflow-hidden bg-secondary dark:bg-darkbg">
+                        <img src="assets/img/Knitted Beanie.jpg" alt="Item" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="flex-grow flex flex-col justify-between py-1">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <h5 class="font-medium text-lg text-dark dark:text-white">Knitted Beanie</h5>
+                                <button class="text-muted hover:text-accent transition-colors"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg></button>
+                            </div>
+                            <p class="text-sm text-muted mb-2">Accessories</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <div class="flex items-center border border-border dark:border-white/10 rounded-full px-3 py-1 bg-secondary dark:bg-darkbg">
+                                <button class="text-muted hover:text-primary w-6 text-center text-lg">-</button>
+                                <span class="px-3 text-sm font-medium w-6 text-center">1</span>
+                                <button class="text-muted hover:text-primary w-6 text-center text-lg">+</button>
+                            </div>
+                            <span class="font-semibold text-lg text-dark dark:text-white">$24.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer / Checkout -->
+            <div class="p-8 border-t border-border dark:border-white/10 bg-secondary/30 dark:bg-darkbg/50">
+                <div class="flex justify-between mb-4 items-end">
+                    <span class="text-muted text-lg">Subtotal</span>
+                    <span class="font-serif text-3xl text-dark dark:text-white">$69.00</span>
+                </div>
+                <p class="text-sm text-muted mb-8">Shipping, taxes, and discount codes calculated at checkout.</p>
+                <a href="#" class="btn-primary w-full text-center py-4 rounded-full text-lg shadow-[0_10px_30px_rgba(217,119,87,0.3)] hover:shadow-[0_15px_40px_rgba(217,119,87,0.4)] hover:-translate-y-1 transition-all duration-300 inline-block">Proceed to Checkout</a>
+                <a href="shop.html" class="block text-center text-muted mt-6 font-medium hover:text-primary transition-colors text-sm hover:underline">Continue Shopping</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- JS for Cart -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartModal = document.getElementById('cartModal');
+            const cartBackdrop = document.getElementById('cartBackdrop');
+            const cartPanel = document.getElementById('cartPanel');
+            const closeCartBtn = document.getElementById('closeCartBtn');
+            const cartBtns = document.querySelectorAll('.open-cart-btn');
+
+            function openCart() {
+                cartModal.classList.remove('hidden');
+                setTimeout(() => {
+                    cartBackdrop.classList.remove('opacity-0');
+                    cartBackdrop.classList.add('opacity-100');
+                    cartPanel.classList.remove('translate-x-full');
+                    cartPanel.classList.add('translate-x-0');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeCart() {
+                cartBackdrop.classList.remove('opacity-100');
+                cartBackdrop.classList.add('opacity-0');
+                cartPanel.classList.remove('translate-x-0');
+                cartPanel.classList.add('translate-x-full');
+                
+                setTimeout(() => {
+                    cartModal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+
+            cartBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openCart();
+                });
+            });
+
+            if (closeCartBtn) closeCartBtn.addEventListener('click', closeCart);
+            if (cartBackdrop) cartBackdrop.addEventListener('click', closeCart);
+        });
+    </script>
+
+
+    <!-- Full Screen Search Overlay -->
+    <div id="searchModal" class="fixed inset-0 z-[110] hidden flex flex-col justify-center items-center">
+        <!-- Blurred Backdrop -->
+        <div id="searchBackdrop" class="absolute inset-0 bg-dark/90 backdrop-blur-md opacity-0 transition-opacity duration-300"></div>
+        
+        <!-- Close Button -->
+        <button id="closeSearchBtn" class="absolute top-8 right-8 text-white/50 hover:text-white transition-all duration-300 hover:rotate-90 z-10">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        
+        <!-- Search Content -->
+        <div id="searchContent" class="relative z-10 w-full max-w-4xl px-6 opacity-0 transform translate-y-8 transition-all duration-500 delay-100">
+            <div class="relative flex items-center">
+                <svg class="w-8 h-8 text-white/50 absolute left-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <input type="text" placeholder="Search for products, categories..." class="w-full bg-transparent border-b-2 border-white/20 text-white text-2xl md:text-5xl font-serif py-4 pl-12 focus:outline-none focus:border-primary transition-colors placeholder-white/30">
+            </div>
+            
+            <div class="mt-12 flex flex-col items-center">
+                <p class="text-white/50 text-sm uppercase tracking-widest font-medium mb-6">Trending Searches</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="shop.html" class="px-6 py-2 rounded-full border border-white/20 text-white hover:bg-white hover:text-dark transition-colors">Organic Cotton</a>
+                    <a href="shop.html" class="px-6 py-2 rounded-full border border-white/20 text-white hover:bg-white hover:text-dark transition-colors">Winter Jackets</a>
+                    <a href="shop.html" class="px-6 py-2 rounded-full border border-white/20 text-white hover:bg-white hover:text-dark transition-colors">Newborn Sets</a>
+                    <a href="shop.html" class="px-6 py-2 rounded-full border border-white/20 text-white hover:bg-white hover:text-dark transition-colors">Knitwear</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS for Search -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchModal = document.getElementById('searchModal');
+            const searchBackdrop = document.getElementById('searchBackdrop');
+            const searchContent = document.getElementById('searchContent');
+            const closeSearchBtn = document.getElementById('closeSearchBtn');
+            const searchBtns = document.querySelectorAll('.open-search-btn');
+            const searchInput = searchModal.querySelector('input');
+
+            function openSearch() {
+                searchModal.classList.remove('hidden');
+                setTimeout(() => {
+                    searchBackdrop.classList.remove('opacity-0');
+                    searchBackdrop.classList.add('opacity-100');
+                    searchContent.classList.remove('opacity-0', 'translate-y-8');
+                    searchContent.classList.add('opacity-100', 'translate-y-0');
+                    searchInput.focus();
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeSearch() {
+                searchBackdrop.classList.remove('opacity-100');
+                searchBackdrop.classList.add('opacity-0');
+                searchContent.classList.remove('opacity-100', 'translate-y-0');
+                searchContent.classList.add('opacity-0', 'translate-y-8');
+                
+                setTimeout(() => {
+                    searchModal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 500);
+            }
+
+            searchBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openSearch();
+                });
+            });
+
+            if (closeSearchBtn) closeSearchBtn.addEventListener('click', closeSearch);
+            if (searchBackdrop) searchBackdrop.addEventListener('click', closeSearch);
+            
+            // Close on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !searchModal.classList.contains('hidden')) {
+                    closeSearch();
+                }
+            });
+        });
+    </script>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="fixed bottom-8 right-8 bg-primary text-white p-4 rounded-full shadow-[0_5px_20px_rgba(217,119,87,0.4)] opacity-0 translate-y-10 pointer-events-none transition-all duration-500 z-50 hover:bg-dark hover:shadow-2xl hover:-translate-y-2 border border-transparent hover:border-white/20" aria-label="Back to top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <!-- JS for Back to Top -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const backToTopBtn = document.getElementById('backToTopBtn');
+            
+            if (backToTopBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 400) {
+                        backToTopBtn.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+                        backToTopBtn.classList.add('opacity-100', 'translate-y-0');
+                    } else {
+                        backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+                        backToTopBtn.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+                    }
+                });
+
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

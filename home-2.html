@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home 2 - Baby & Kids Clothing Store</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css?v=1785908019">
+    <link rel="stylesheet" href="assets/css/dark-mode.css?v=1785908019">
+    <link rel="stylesheet" href="assets/css/rtl.css?v=1785908019">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C85A48',
+                        secondary: '#F5EBE1',
+                        accent: '#788E7B',
+                        dark: '#2A2421',
+                        muted: '#8B8276',
+                        border: '#E8DED3',
+                        darkbg: '#1F1B18',
+                        darkcard: '#2A2421',
+                        darktext: '#F5EBE1',
+                        white: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-secondary dark:bg-darkbg text-dark dark:text-darktext transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-secondary dark:bg-darkcard border-b border-border dark:border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 text-2xl font-semibold tracking-wide group">
+                        <svg class="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-7"/><path d="M12 15C8 15 5 11 5 7c0 2 2 4 4 4 2 0 3-1 3-4"/><path d="M12 15c4 0 7-4 7-8 0 2-2 4-4 4-2 0-3-1-3-4"/></svg>
+                        <span>Sprout<span class="text-primary">.</span></span>
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex space-x-8 items-center">
+                    <a href="index.html" class="text-sm font-medium hover:text-primary transition-colors">Home</a>
+                    <a href="home-2.html" class="text-sm font-medium hover:text-primary transition-colors text-primary">Home 2</a>
+                    <a href="about.html" class="text-sm font-medium hover:text-primary transition-colors">About</a>
+                    <a href="shop.html" class="text-sm font-medium hover:text-primary transition-colors">Shop</a>
+                    <a href="lookbook.html" class="text-sm font-medium hover:text-primary transition-colors">Lookbook</a>
+                    <a href="contact.html" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-6">
+                    <button class="open-search-btn text-dark dark:text-white hover:text-primary transition-colors">
+                        <svg class="w-5 h-5 rtl-flip pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </button>
+                    <button class="open-cart-btn text-dark dark:text-white hover:text-primary transition-colors relative">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <span class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full h-4 w-4 flex items-center justify-center pointer-events-none shadow-sm">2</span>
+                    </button>
+                    
+                    
+                    <button class="theme-toggle text-dark dark:text-white hover:text-primary transition-colors">
+                        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    </button>
+                    
+                    <button class="rtl-toggle text-sm font-medium text-dark dark:text-white hover:text-primary transition-colors">
+                        RTL
+                    </button>
+                    <a href="login.html" class="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-medium hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 border border-primary hover:bg-transparent hover:text-primary ml-4">Login</a>
+                </div>
+
+                <div class="lg:hidden flex items-center space-x-4">
+                    <button id="menu-toggle" class="text-dark dark:text-white p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden opacity-0 transition-opacity duration-300"></div>
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-[320px] bg-secondary dark:bg-darkbg z-[70] transform translate-x-full transition-transform duration-300 shadow-2xl overflow-y-auto">
+        <div class="p-6 flex justify-between items-center border-b border-border dark:border-border">
+            <span class="text-xl font-semibold">Menu</span>
+            <button id="close-menu" class="p-2 text-dark dark:text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div class="p-6 flex flex-col space-y-6 text-start items-start w-full">
+            <a href="index.html" class="text-lg font-medium w-full hover:text-primary transition-colors text-dark dark:text-white">Home</a>
+            <a href="home-2.html" class="text-lg font-medium w-full hover:text-primary transition-colors text-primary">Home 2</a>
+            <a href="about.html" class="text-lg font-medium w-full hover:text-primary transition-colors text-dark dark:text-white">About</a>
+            <a href="shop.html" class="text-lg font-medium w-full hover:text-primary transition-colors text-dark dark:text-white">Shop</a>
+            <a href="lookbook.html" class="text-lg font-medium w-full hover:text-primary transition-colors text-dark dark:text-white">Lookbook</a>
+            <a href="contact.html" class="text-lg font-medium w-full hover:text-primary transition-colors text-dark dark:text-white">Contact</a>
+            
+            <div class="pt-6 border-t border-border dark:border-border flex flex-col space-y-6 w-full mt-auto">
+                <!-- Icons Row -->
+                <div class="flex items-center gap-6">
+                    <button class="open-search-btn text-dark dark:text-white hover:text-primary transition-colors">
+                        <svg class="w-6 h-6 rtl-flip pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </button>
+                    <button class="open-cart-btn text-dark dark:text-white hover:text-primary transition-colors relative">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <span class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full h-4 w-4 flex items-center justify-center pointer-events-none shadow-sm">2</span>
+                    </button>
+                    <button class="theme-toggle text-dark dark:text-white hover:text-primary transition-colors">
+                        <svg class="w-6 h-6 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        <svg class="w-6 h-6 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    </button>
+                    <button class="rtl-toggle text-sm font-medium text-dark dark:text-white hover:text-primary transition-colors">
+                        RTL
+                    </button>
+                </div>
+                <a href="login.html" class="btn-primary w-full text-center">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section (Premium 2-Column Layout) -->
+    <section class="relative min-h-screen flex items-center bg-secondary dark:bg-darkbg pt-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 lg:py-0">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                
+                <!-- Left Content -->
+                <div class="max-w-2xl text-center lg:text-left z-20 relative order-2 lg:order-1 mt-12 lg:mt-0 animate-fade-up">
+                    <span class="text-primary font-medium tracking-widest uppercase text-sm mb-4 block">Premium Collection 2026</span>
+                    <h1 class="mb-6 text-dark dark:text-white">Designed For Growing Smiles</h1>
+                    <p class="text-muted text-lg lg:text-xl mb-10 max-w-xl mx-auto lg:mx-0">
+                        Discover premium clothing thoughtfully designed for babies and children, combining comfort, quality, and timeless style for every season.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="shop.html" class="btn-primary">Shop Collection</a>
+                        <a href="about.html" class="btn-secondary bg-transparent border-dark dark:border-white text-dark dark:text-white hover:bg-dark dark:hover:bg-white hover:text-white dark:hover:text-dark transition-colors">Discover Our Story</a>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="w-full h-[50vh] lg:h-[calc(100vh-140px)] z-10 relative overflow-hidden rounded-2xl lg:rounded-3xl lg:rounded-tl-[150px] lg:rounded-bl-[150px] order-1 lg:order-2 animate-fade-up" style="animation-delay: 0.2s;">
+                    <img src="assets/img/luxury_kids_fashion.png" alt="Premium Kids Fashion" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: New Arrivals Carousel -->
+    <section class="py-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12 animate-fade-up">
+                <div>
+                    <span class="text-primary font-medium tracking-widest uppercase text-sm mb-4 block">Just Landed</span>
+                    <h2 class="text-4xl font-serif">New Arrivals</h2>
+                </div>
+                <div class="flex gap-4">
+                    <button class="swiper-btn-prev w-12 h-12 rounded-full border border-border dark:border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-colors group">
+                        <svg class="w-5 h-5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button class="swiper-btn-next w-12 h-12 rounded-full border border-border dark:border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-colors group">
+                        <svg class="w-5 h-5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="swiper new-arrivals-swiper animate-fade-up" style="animation-delay: 0.2s;">
+                <div class="swiper-wrapper">
+                    <!-- Product Slides -->
+                    <div class="swiper-slide">
+                        <div class="group flex flex-col h-full hover-fabric-lift bg-[#f6efe9] dark:bg-darkcard rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-dark/5 dark:border-white/5">
+                            <div class="relative aspect-[3/4] overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1604467794349-0b74285de7e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Linen Romper" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button class="w-full bg-white text-dark py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-colors text-sm">Add To Cart</button>
+                                </div>
+                            </div>
+                            <div class="flex-grow flex flex-col p-5">
+                                <h3 class="mb-4 text-lg font-medium text-dark dark:text-white h5">Organic Linen Romper</h3>
+                                <div class="flex justify-between items-center mt-auto">
+                                    <span class="font-semibold text-xl text-dark dark:text-white">$45.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="group flex flex-col h-full hover-fabric-lift bg-[#f6efe9] dark:bg-darkcard rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-dark/5 dark:border-white/5">
+                            <div class="relative aspect-[3/4] overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1522771930-78848d9293e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wool Sweater" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button class="w-full bg-white text-dark py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-colors text-sm">Add To Cart</button>
+                                </div>
+                            </div>
+                            <div class="flex-grow flex flex-col p-5">
+                                <h3 class="mb-4 text-lg font-medium text-dark dark:text-white h5">Merino Wool Sweater</h3>
+                                <div class="flex justify-between items-center mt-auto">
+                                    <span class="font-semibold text-xl text-dark dark:text-white">$65.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="group flex flex-col h-full hover-fabric-lift bg-[#f6efe9] dark:bg-darkcard rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-dark/5 dark:border-white/5">
+                            <div class="relative aspect-[3/4] overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Summer Dress" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button class="w-full bg-white text-dark py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-colors text-sm">Add To Cart</button>
+                                </div>
+                            </div>
+                            <div class="flex-grow flex flex-col p-5">
+                                <h3 class="mb-4 text-lg font-medium text-dark dark:text-white h5">Cotton Summer Dress</h3>
+                                <div class="flex justify-between items-center mt-auto">
+                                    <span class="font-semibold text-xl text-dark dark:text-white">$55.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="group flex flex-col h-full hover-fabric-lift bg-[#f6efe9] dark:bg-darkcard rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-dark/5 dark:border-white/5">
+                            <div class="relative aspect-[3/4] overflow-hidden">
+                                <img src="assets/img/denim2.jpg" alt="Denim Jacket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button class="w-full bg-white text-dark py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-colors text-sm">Add To Cart</button>
+                                </div>
+                            </div>
+                            <div class="flex-grow flex flex-col p-5">
+                                <h3 class="mb-4 text-lg font-medium text-dark dark:text-white h5">Classic Denim Jacket</h3>
+                                <div class="flex justify-between items-center mt-auto">
+                                    <span class="font-semibold text-xl text-dark dark:text-white">$48.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="group flex flex-col h-full hover-fabric-lift bg-[#f6efe9] dark:bg-darkcard rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-dark/5 dark:border-white/5">
+                            <div class="relative aspect-[3/4] overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1622290319146-7b63df48a635?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cardigan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button class="w-full bg-white text-dark py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-colors text-sm">Add To Cart</button>
+                                </div>
+                            </div>
+                            <div class="flex-grow flex flex-col p-5">
+                                <h3 class="mb-4 text-lg font-medium text-dark dark:text-white h5">Cashmere Cardigan</h3>
+                                <div class="flex justify-between items-center mt-auto">
+                                    <span class="font-semibold text-xl text-dark dark:text-white">$85.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Best Sellers Layout -->
+    <section class="py-24 bg-secondary/50 dark:bg-darkcard border-y border-border dark:border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-up">
+                <h2 class="text-4xl font-serif">Signature Styles</h2>
+                <p class="text-muted mt-4 max-w-2xl mx-auto">Our most loved pieces, favored by parents for their enduring quality and timeless design.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Large Featured Product -->
+                <div class="lg:col-span-2 group relative h-[500px] rounded-3xl overflow-hidden hover-fabric-lift animate-fade-up">
+                    <img src="https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full flex justify-between items-end">
+                        <div class="text-white">
+                            <span class="bg-primary/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3 inline-block">Best Seller</span>
+                            <h3 class="text-3xl font-serif mb-2">The Heritage Collection</h3>
+                            <p class="text-white/80 max-w-md">Knitted sets designed to be passed down through generations.</p>
+                        </div>
+                        <a href="shop.html" class="bg-white text-dark w-12 h-12 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors shrink-0 shadow-lg">
+                            <svg class="w-5 h-5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Stacked Products -->
+                <div class="flex flex-col gap-8 animate-fade-up" style="animation-delay: 0.2s;">
+                    <!-- Sub item 1 -->
+                    <div class="relative h-[234px] rounded-3xl overflow-hidden group hover-fabric-lift">
+                        <img src="assets/img/winterpuffer.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 w-full text-white">
+                            <h4 class="text-xl font-medium mb-1">Winter Puffer</h4>
+                            <span class="font-bold">$110.00</span>
+                        </div>
+                    </div>
+                    <!-- Sub item 2 -->
+                    <div class="relative h-[234px] rounded-3xl overflow-hidden group hover-fabric-lift">
+                        <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 w-full text-white">
+                            <h4 class="text-xl font-medium mb-1">Cotton Knit Set</h4>
+                            <span class="font-bold">$85.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Fabric & Care Guide -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="animate-fade-up">
+                    <span class="text-primary font-medium tracking-widest uppercase text-sm mb-4 block">Our Commitment</span>
+                    <h2 class="text-4xl font-serif mb-6">Gentle On Skin,<br>Kind To Earth.</h2>
+                    <p class="text-muted text-lg mb-8 leading-relaxed">We source only the finest organic cotton, sustainable bamboo, and premium merino wool. Our fabrics are hypoallergenic, breathable, and pre-washed for ultimate softness.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-secondary dark:bg-darkcard rounded-full flex items-center justify-center shrink-0 mr-4">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-medium mb-2 h4">100% Organic Cotton</h3>
+                                <p class="text-muted text-sm">GOTS certified, ensuring no harmful chemicals touch your baby's delicate skin.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-secondary dark:bg-darkcard rounded-full flex items-center justify-center shrink-0 mr-4">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-medium mb-2 h4">Ethical Production</h3>
+                                <p class="text-muted text-sm">Crafted in family-owned European ateliers with fair labor practices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative animate-fade-up" style="animation-delay: 0.2s;">
+                    <div class="aspect-square rounded-full overflow-hidden border-8 border-secondary dark:border-darkcard p-2 bg-white dark:bg-darkbg">
+                        <img src="https://images.unsplash.com/photo-1522771930-78848d9293e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Fabric" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-2 -left-2 md:-bottom-4 md:-left-4 bg-white dark:bg-darkcard p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-xl border border-border dark:border-white/5 max-w-[200px] md:max-w-xs animate-bounce" style="animation-duration: 3s;">
+                        <p class="font-serif text-sm md:text-lg leading-tight">"The softest garments we've ever purchased."</p>
+                        <span class="text-xs md:text-sm text-primary mt-1 md:mt-2 block">— Marie Claire Magazine</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Instagram Masonry Grid -->
+    <section class="py-24 bg-white dark:bg-darkbg border-t border-border dark:border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 animate-fade-up">
+                <h2 class="text-4xl font-serif">@Boutique.Kids</h2>
+                <p class="text-muted mt-4">Join our community and tag us to be featured.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#" class="block relative rounded-2xl overflow-hidden group hover-fabric-lift animate-fade-up aspect-square">
+                    <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                </a>
+                <a href="#" class="block relative rounded-2xl overflow-hidden group hover-fabric-lift animate-fade-up aspect-square" style="animation-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1604467794349-0b74285de7e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                </a>
+                <a href="#" class="block relative rounded-2xl overflow-hidden group hover-fabric-lift animate-fade-up aspect-square" style="animation-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                </a>
+                <a href="#" class="block relative rounded-2xl overflow-hidden group hover-fabric-lift animate-fade-up aspect-square" style="animation-delay: 0.3s;">
+                    <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary dark:bg-darkcard pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Column 1 -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 text-3xl font-semibold tracking-wide mb-6 group w-fit">
+                        <svg class="w-9 h-9 text-primary group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-7"/><path d="M12 15C8 15 5 11 5 7c0 2 2 4 4 4 2 0 3-1 3-4"/><path d="M12 15c4 0 7-4 7-8 0 2-2 4-4 4-2 0-3-1-3-4"/></svg>
+                        <span>Sprout<span class="text-primary">.</span></span>
+                    </a>
+                    <p class="text-muted mb-6 leading-relaxed text-sm">Crafting beautiful childhood memories through premium fashion, combining comfort, safety, and joyful design.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white dark:bg-darkbg flex items-center justify-center text-dark dark:text-white hover:text-primary transition-colors border border-border dark:border-white/5 shadow-sm">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white dark:bg-darkbg flex items-center justify-center text-dark dark:text-white hover:text-primary transition-colors border border-border dark:border-white/5 shadow-sm">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white dark:bg-darkbg flex items-center justify-center text-dark dark:text-white hover:text-primary transition-colors border border-border dark:border-white/5 shadow-sm">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="mb-6 font-medium text-lg tracking-wide text-dark dark:text-white">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-muted hover:text-primary transition-colors">Our Story</a></li>
+                        <li><a href="shop.html" class="text-muted hover:text-primary transition-colors">Shop All</a></li>
+                        <li><a href="size-guide.html" class="text-muted hover:text-primary transition-colors">Size Guide</a></li>
+                        
+                        <li><a href="contact.html" class="text-muted hover:text-primary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="mb-6 font-medium text-lg tracking-wide text-dark dark:text-white">Collections</h4>
+                    <ul class="space-y-3">
+                        <li><a href="shop.html#ages" class="text-muted hover:text-primary transition-colors">Shop by Age</a></li>
+                        <li><a href="shop.html#seasons" class="text-muted hover:text-primary transition-colors">Seasonal Lookbook</a></li>
+                        <li><a href="shop.html#school" class="text-muted hover:text-primary transition-colors">School Uniforms</a></li>
+                        <li><a href="shop.html#gifts" class="text-muted hover:text-primary transition-colors">Gift Sets</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="mb-6 font-medium text-lg tracking-wide text-dark dark:text-white">Newsletter</h4>
+                    <p class="text-muted mb-4 text-sm">Subscribe to receive updates, access to exclusive deals, and more.</p>
+                    <form class="flex flex-col space-y-3">
+                        <input type="email" placeholder="Enter your email address" class="px-4 py-3 rounded-xl bg-white dark:bg-darkbg border border-border dark:border-white/10 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors w-full" required>
+                        <button type="submit" class="btn-primary w-full py-3 rounded-xl">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-border dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-muted">
+                <p class="text-xs">&copy; 2026 Sprout. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js?v=1785908331"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof AOS !== 'undefined') AOS.init({ once: true, duration: 800 });
+        });
+    </script>
+
+
+    <!-- Cart Slide-out / Modal Overlay -->
+    <div id="cartModal" class="fixed inset-0 z-[100] hidden">
+        <!-- Blurred Backdrop -->
+        <div id="cartBackdrop" class="absolute inset-0 bg-dark/40 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+        
+        <!-- Slide-out Panel (Right side) -->
+        <div id="cartPanel" class="absolute top-0 right-0 h-full w-full sm:w-[450px] bg-white dark:bg-darkcard shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col border-l border-border dark:border-white/10">
+            
+            <!-- Header -->
+            <div class="p-8 border-b border-border dark:border-white/10 flex justify-between items-center">
+                <h3 class="text-3xl font-serif text-dark dark:text-white">Your Cart <span class="text-accent">(2)</span></h3>
+                <button id="closeCartBtn" class="text-muted hover:text-primary transition-transform duration-300 hover:rotate-90">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <!-- Cart Items -->
+            <div class="flex-grow p-8 overflow-y-auto space-y-8">
+                <!-- Item 1 -->
+                <div class="flex gap-6 group">
+                    <div class="w-24 h-32 rounded-2xl overflow-hidden bg-secondary dark:bg-darkbg">
+                        <img src="https://images.unsplash.com/photo-1604467794349-0b74285de7e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Item" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="flex-grow flex flex-col justify-between py-1">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <h5 class="font-medium text-lg text-dark dark:text-white">Organic Linen Romper</h5>
+                                <button class="text-muted hover:text-accent transition-colors"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg></button>
+                            </div>
+                            <p class="text-sm text-muted mb-2">Newborn - 2 Years</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <div class="flex items-center border border-border dark:border-white/10 rounded-full px-3 py-1 bg-secondary dark:bg-darkbg">
+                                <button class="text-muted hover:text-primary w-6 text-center text-lg">-</button>
+                                <span class="px-3 text-sm font-medium w-6 text-center">1</span>
+                                <button class="text-muted hover:text-primary w-6 text-center text-lg">+</button>
+                            </div>
+                            <span class="font-semibold text-lg text-dark dark:text-white">$45.00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="flex gap-6 group">
+                    <div class="w-24 h-32 rounded-2xl overflow-hidden bg-secondary dark:bg-darkbg">
+                        <img src="https://images.unsplash.com/photo-1560855225-b7782335198e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Item" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="flex-grow flex flex-col justify-between py-1">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <h5 class="font-medium text-lg text-dark dark:text-white">Knitted Beanie</h5>
+                                <button class="text-muted hover:text-accent transition-colors"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg></button>
+                            </div>
+                            <p class="text-sm text-muted mb-2">Accessories</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <div class="flex items-center border border-border dark:border-white/10 rounded-full px-3 py-1 bg-secondary dark:bg-darkbg">
+                                <button class="text-muted hover:text-primary w-6 text-center text-lg">-</button>
+                                <span class="px-3 text-sm font-medium w-6 text-center">1</span>
+                                <button class="text-muted hover:text-primary w-6 text-center text-lg">+</button>
+                            </div>
+                            <span class="font-semibold text-lg text-dark dark:text-white">$24.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer / Checkout -->
+            <div class="p-8 border-t border-border dark:border-white/10 bg-secondary/30 dark:bg-darkbg/50">
+                <div class="flex justify-between mb-4 items-end">
+                    <span class="text-muted text-lg">Subtotal</span>
+                    <span class="font-serif text-3xl text-dark dark:text-white">$69.00</span>
+                </div>
+                <p class="text-sm text-muted mb-8">Shipping, taxes, and discount codes calculated at checkout.</p>
+                <a href="#" class="btn-primary w-full text-center py-4 rounded-full text-lg shadow-[0_10px_30px_rgba(217,119,87,0.3)] hover:shadow-[0_15px_40px_rgba(217,119,87,0.4)] hover:-translate-y-1 transition-all duration-300 inline-block">Proceed to Checkout</a>
+                <a href="shop.html" class="block text-center text-muted mt-6 font-medium hover:text-primary transition-colors text-sm hover:underline">Continue Shopping</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- JS for Cart -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartModal = document.getElementById('cartModal');
+            const cartBackdrop = document.getElementById('cartBackdrop');
+            const cartPanel = document.getElementById('cartPanel');
+            const closeCartBtn = document.getElementById('closeCartBtn');
+            const cartBtns = document.querySelectorAll('.open-cart-btn');
+
+            function openCart() {
+                cartModal.classList.remove('hidden');
+                setTimeout(() => {
+                    cartBackdrop.classList.remove('opacity-0');
+                    cartBackdrop.classList.add('opacity-100');
+                    cartPanel.classList.remove('translate-x-full');
+                    cartPanel.classList.add('translate-x-0');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeCart() {
+                cartBackdrop.classList.remove('opacity-100');
+                cartBackdrop.classList.add('opacity-0');
+                cartPanel.classList.remove('translate-x-0');
+                cartPanel.classList.add('translate-x-full');
+                
+                setTimeout(() => {
+                    cartModal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+
+            cartBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openCart();
+                });
+            });
+
+            if (closeCartBtn) closeCartBtn.addEventListener('click', closeCart);
+            if (cartBackdrop) cartBackdrop.addEventListener('click', closeCart);
+        });
+    </script>
+
+
+    <!-- Full Screen Search Overlay -->
+    <div id="searchModal" class="fixed inset-0 z-[110] hidden flex flex-col justify-center items-center">
+        <!-- Blurred Backdrop -->
+        <div id="searchBackdrop" class="absolute inset-0 bg-dark/90 backdrop-blur-md opacity-0 transition-opacity duration-300"></div>
+        
+        <!-- Close Button -->
+        <button id="closeSearchBtn" class="absolute top-8 right-8 text-white/50 hover:text-white transition-all duration-300 hover:rotate-90 z-10">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        
+        <!-- Search Content -->
+        <div id="searchContent" class="relative z-10 w-full max-w-4xl px-6 opacity-0 transform translate-y-8 transition-all duration-500 delay-100">
+            <div class="relative flex items-center">
+                <svg class="w-8 h-8 text-white/50 absolute left-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <input type="text" placeholder="Search for products, categories..." class="w-full bg-transparent border-b-2 border-white/20 text-white text-2xl md:text-5xl font-serif py-4 pl-12 focus:outline-none focus:border-primary transition-colors placeholder-white/30">
+            </div>
+            
+            <div class="mt-12 flex flex-col items-center">
+                <p class="text-white/50 text-sm uppercase tracking-widest font-medium mb-6">Trending Searches</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="shop.html" class="px-6 py-2 rounded-full border border-white/20 text-white hover:bg-white hover:text-dark transition-colors">Organic Cotton</a>
+                    <a href="shop.html" class="px-6 py-2 rounded-full border border-white/20 text-white hover:bg-white hover:text-dark transition-colors">Winter Jackets</a>
+                    <a href="shop.html" class="px-6 py-2 rounded-full border border-white/20 text-white hover:bg-white hover:text-dark transition-colors">Newborn Sets</a>
+                    <a href="shop.html" class="px-6 py-2 rounded-full border border-white/20 text-white hover:bg-white hover:text-dark transition-colors">Knitwear</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS for Search -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchModal = document.getElementById('searchModal');
+            const searchBackdrop = document.getElementById('searchBackdrop');
+            const searchContent = document.getElementById('searchContent');
+            const closeSearchBtn = document.getElementById('closeSearchBtn');
+            const searchBtns = document.querySelectorAll('.open-search-btn');
+            const searchInput = searchModal.querySelector('input');
+
+            function openSearch() {
+                searchModal.classList.remove('hidden');
+                setTimeout(() => {
+                    searchBackdrop.classList.remove('opacity-0');
+                    searchBackdrop.classList.add('opacity-100');
+                    searchContent.classList.remove('opacity-0', 'translate-y-8');
+                    searchContent.classList.add('opacity-100', 'translate-y-0');
+                    searchInput.focus();
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeSearch() {
+                searchBackdrop.classList.remove('opacity-100');
+                searchBackdrop.classList.add('opacity-0');
+                searchContent.classList.remove('opacity-100', 'translate-y-0');
+                searchContent.classList.add('opacity-0', 'translate-y-8');
+                
+                setTimeout(() => {
+                    searchModal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 500);
+            }
+
+            searchBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openSearch();
+                });
+            });
+
+            if (closeSearchBtn) closeSearchBtn.addEventListener('click', closeSearch);
+            if (searchBackdrop) searchBackdrop.addEventListener('click', closeSearch);
+            
+            // Close on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !searchModal.classList.contains('hidden')) {
+                    closeSearch();
+                }
+            });
+        });
+    </script>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="fixed bottom-8 right-8 bg-primary text-white p-4 rounded-full shadow-[0_5px_20px_rgba(217,119,87,0.4)] opacity-0 translate-y-10 pointer-events-none transition-all duration-500 z-50 hover:bg-dark hover:shadow-2xl hover:-translate-y-2 border border-transparent hover:border-white/20" aria-label="Back to top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <!-- JS for Back to Top -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const backToTopBtn = document.getElementById('backToTopBtn');
+            
+            if (backToTopBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 400) {
+                        backToTopBtn.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+                        backToTopBtn.classList.add('opacity-100', 'translate-y-0');
+                    } else {
+                        backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+                        backToTopBtn.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+                    }
+                });
+
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
