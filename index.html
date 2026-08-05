@@ -65,7 +65,7 @@
                 </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden lg:flex gap-8 items-center">
+                <div class="hidden xl:flex gap-8 items-center">
                     <a href="index.html" class="text-sm font-medium hover:text-primary transition-colors text-primary">Home</a>
                     <a href="home-2.html" class="text-sm font-medium hover:text-primary transition-colors">Home 2</a>
                     <a href="about.html" class="text-sm font-medium hover:text-primary transition-colors">About</a>
@@ -75,7 +75,7 @@
                 </div>
 
                 <!-- Right Side Icons -->
-                <div class="hidden lg:flex items-center gap-6">
+                <div class="hidden xl:flex items-center gap-6">
                     <button class="open-search-btn text-dark dark:text-white hover:text-primary transition-colors">
                         <svg class="w-5 h-5 rtl-flip pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                     </button>
@@ -99,7 +99,7 @@
                 </div>
 
                 <!-- Hamburger (Mobile) -->
-                <div class="lg:hidden flex items-center gap-4">
+                <div class="xl:hidden flex items-center gap-4">
                     <button id="menu-toggle" class="text-dark dark:text-white p-2">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
@@ -151,27 +151,27 @@
     <!-- Premium Hero Section -->
     <section class="relative min-h-screen py-32 md:py-0 md:h-screen flex flex-col justify-center overflow-hidden bg-dark">
         <!-- Background Image -->
-        <div class="absolute inset-0 z-0">
+        <div class="absolute inset-x-0 bottom-0 top-20 z-0">
             <!-- Using a high-quality, relevant fashion image -->
-            <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Premium Boutique Collection" class="w-full h-full object-cover opacity-80">
+            <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Premium Boutique Collection" class="w-full h-full object-cover object-[center_30%] opacity-80">
             <!-- Dark gradient overlay for text readability -->
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10"></div>
         </div>
         
         <!-- Content -->
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-24 md:mt-20 flex flex-col md:flex-row justify-between items-center md:items-end gap-12">
-            <div class="max-w-3xl animate-fade-up text-center md:text-left flex flex-col items-center md:items-start">
-                <span class="text-white/90 font-medium tracking-[0.2em] uppercase text-sm mb-6 block drop-shadow-md">The 2026 Collection</span>
-                <h1 class="text-white mb-6 text-6xl md:text-7xl lg:text-8xl font-serif leading-[1.1] drop-shadow-lg">Elevating<br><span class="text-primary">Childhood.</span></h1>
-                <p class="text-white/90 text-lg md:text-xl font-light mb-10 max-w-xl leading-relaxed">Discover meticulously crafted garments for babies and children, where timeless design meets uncompromising comfort.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start w-full sm:w-auto">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-24 lg:mt-20 flex flex-col lg:flex-row justify-between items-center lg:items-end gap-12">
+            <div class="max-w-3xl animate-fade-up text-center lg:text-start flex flex-col items-center lg:items-start">
+                <span class="text-white/90 font-medium tracking-[0.2em] uppercase text-sm mb-6 block" style="text-shadow: 0px 4px 12px rgba(0,0,0,0.8);">The 2026 Collection</span>
+                <h1 class="text-white mb-6 text-6xl md:text-7xl lg:text-8xl font-serif leading-[1.1]" style="text-shadow: 0px 4px 12px rgba(0,0,0,0.8);">Elevating<br><span class="text-primary">Childhood.</span></h1>
+                <p class="text-white/90 text-lg md:text-xl font-light mb-10 max-w-xl leading-relaxed" style="text-shadow: 0px 4px 12px rgba(0,0,0,0.8);">Discover meticulously crafted garments for babies and children, where timeless design meets uncompromising comfort.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full sm:w-auto">
                     <a href="shop.html" class="bg-primary text-white px-10 py-4 rounded-full font-medium hover:bg-white hover:text-dark transition-all duration-300 border border-primary hover:border-white shadow-[0_10px_30px_rgba(217,119,87,0.3)] hover:-translate-y-1 w-full sm:w-auto">Shop Collection</a>
                     <a href="shop.html#ages" class="bg-transparent text-white px-10 py-4 rounded-full font-medium border border-white/30 hover:border-primary hover:text-primary transition-all duration-300 backdrop-blur-sm w-full sm:w-auto">Explore By Age</a>
                 </div>
             </div>
             
             <!-- Animated Circular Badge (Now visible on mobile) -->
-            <div class="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 animate-fade-up shrink-0 mx-auto md:mx-0 mt-8 md:mt-0" style="animation-delay: 0.4s;">
+            <div class="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 animate-fade-up shrink-0 mx-auto lg:mx-0 mt-8 lg:mt-0" style="animation-delay: 0.4s;">
                 <img src="assets/img/kid.jpg" alt="New Arrival" class="w-32 h-32 md:w-48 md:h-48 lg:w-60 lg:h-60 rounded-full object-cover shadow-2xl border-4 border-white/20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                 <svg class="absolute inset-0 w-full h-full animate-[spin_15s_linear_infinite] z-20 origin-center" viewBox="0 0 200 200">
                     <path id="circleTextPath" d="M 100, 100 m -78, 0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0" fill="none"></path>
@@ -191,9 +191,9 @@
                 <p class="text-muted max-w-2xl mx-auto">Curated collections tailored for every stage of your child's growth.</p>
             </div>
             
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 gap-6 md:gap-8">
                 <!-- Newborn -->
-                <a href="shop.html#ages" class="group flex flex-col items-center animate-fade-up" style="animation-delay: 0.1s;">
+                <a href="shop.html#ages" class="group flex flex-col items-center animate-fade-up col-span-1 md:col-span-2 lg:col-span-1" style="animation-delay: 0.1s;">
                     <div class="w-full max-w-[220px] aspect-[4/5] rounded-t-full rounded-b-2xl overflow-hidden mb-5 shadow-lg border border-dark/5 dark:border-white/5 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl relative">
                         <img src="assets/img/newborn.jpg" alt="Newborn" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-dark/0 group-hover:bg-dark/5 transition-colors duration-500"></div>
@@ -202,7 +202,7 @@
                 </a>
                 
                 <!-- 0-2 Years -->
-                <a href="shop.html#ages" class="group flex flex-col items-center animate-fade-up" style="animation-delay: 0.2s;">
+                <a href="shop.html#ages" class="group flex flex-col items-center animate-fade-up col-span-1 md:col-span-2 lg:col-span-1" style="animation-delay: 0.2s;">
                     <div class="w-full max-w-[220px] aspect-[4/5] rounded-t-full rounded-b-2xl overflow-hidden mb-5 shadow-lg border border-dark/5 dark:border-white/5 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl relative">
                         <img src="https://images.unsplash.com/photo-1604467794349-0b74285de7e7?auto=format&fit=crop&w=800&q=80" alt="0-2 Years" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-dark/0 group-hover:bg-dark/5 transition-colors duration-500"></div>
@@ -211,7 +211,7 @@
                 </a>
 
                 <!-- 3-5 Years -->
-                <a href="shop.html#ages" class="group flex flex-col items-center animate-fade-up" style="animation-delay: 0.3s;">
+                <a href="shop.html#ages" class="group flex flex-col items-center animate-fade-up col-span-1 md:col-span-2 lg:col-span-1" style="animation-delay: 0.3s;">
                     <div class="w-full max-w-[220px] aspect-[4/5] rounded-t-full rounded-b-2xl overflow-hidden mb-5 shadow-lg border border-dark/5 dark:border-white/5 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl relative">
                         <img src="assets/img/age3-5.jpg" alt="3-5 Years" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-dark/0 group-hover:bg-dark/5 transition-colors duration-500"></div>
@@ -220,7 +220,7 @@
                 </a>
 
                 <!-- 6-8 Years -->
-                <a href="shop.html#ages" class="group flex flex-col items-center animate-fade-up" style="animation-delay: 0.4s;">
+                <a href="shop.html#ages" class="group flex flex-col items-center animate-fade-up col-span-1 md:col-start-2 md:col-span-2 lg:col-start-auto lg:col-span-1" style="animation-delay: 0.4s;">
                     <div class="w-full max-w-[220px] aspect-[4/5] rounded-t-full rounded-b-2xl overflow-hidden mb-5 shadow-lg border border-dark/5 dark:border-white/5 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl relative">
                         <img src="assets/img/age6-8.jpg" alt="6-8 Years" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-dark/0 group-hover:bg-dark/5 transition-colors duration-500"></div>
@@ -229,7 +229,7 @@
                 </a>
 
                 <!-- 9-12 Years -->
-                <a href="shop.html#ages" class="group flex flex-col items-center animate-fade-up col-span-2 md:col-span-1" style="animation-delay: 0.5s;">
+                <a href="shop.html#ages" class="group flex flex-col items-center animate-fade-up col-span-1 md:col-start-4 md:col-span-2 lg:col-start-auto lg:col-span-1" style="animation-delay: 0.5s;">
                     <div class="w-full max-w-[220px] aspect-[4/5] rounded-t-full rounded-b-2xl overflow-hidden mb-5 shadow-lg border border-dark/5 dark:border-white/5 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl relative">
                         <img src="assets/img/age9-12.jpg" alt="9-12 Years" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-dark/0 group-hover:bg-dark/5 transition-colors duration-500"></div>
@@ -292,18 +292,18 @@
     <!-- SECTION 3: Featured Collections (4 Cards) -->
     <section class="bg-secondary dark:bg-darkbg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-end mb-12 animate-fade-up">
+            <div class="flex flex-col md:flex-row md:justify-between items-center md:items-end text-center md:text-left gap-4 md:gap-0 mb-12 animate-fade-up">
                 <div>
                     <h2>Featured Collections</h2>
                     <p class="text-muted mt-2">Premium quality for your little ones.</p>
                 </div>
-                <a href="shop.html" class="hidden md:inline-flex text-primary font-medium hover:text-dark transition-colors items-center">
+                <a href="shop.html" class="inline-flex text-primary font-medium hover:text-dark transition-colors items-center">
                     View All <svg class="w-4 h-4 ml-2 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
             </div>
 
             <!-- 4 Cards Grid -->
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
                 <!-- Card 1 -->
                 <div class="group flex flex-col h-full hover-fabric-lift animate-fade-up bg-[#f6efe9] dark:bg-darkcard rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-dark/5 dark:border-white/5">
                     <div class="relative aspect-[3/4] overflow-hidden">
@@ -379,14 +379,14 @@
                     <img src="assets/img/scluniform.jpg" alt="School Uniform" class="w-full h-full object-cover">
                 </div>
                 
-                <div class="lg:w-1/2 animate-fade-up" style="animation-delay: 0.2s;">
+                <div class="lg:w-1/2 animate-fade-up flex flex-col items-center lg:items-start text-center lg:text-left" style="animation-delay: 0.2s;">
                     <span class="text-primary font-medium tracking-widest uppercase text-sm mb-4 block">Premium Collection</span>
                     <h2 class="mb-6 font-serif">The School Uniform Edit</h2>
                     <p class="text-lg text-muted mb-8">Elevate their everyday school attire with our meticulously crafted uniforms. Designed for durability without compromising on elegance and comfort.</p>
                     
-                    <ul class="space-y-6 mb-10">
+                    <ul class="space-y-6 mb-10 text-start w-full md:w-auto">
                         <li class="flex items-start">
-                            <span class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                            <span class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center ltr:mr-4 rtl:ml-4 mt-1 flex-shrink-0">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             </span>
                             <div>
@@ -395,7 +395,7 @@
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                            <span class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center ltr:mr-4 rtl:ml-4 mt-1 flex-shrink-0">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             </span>
                             <div>
@@ -404,7 +404,7 @@
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <span class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                            <span class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center ltr:mr-4 rtl:ml-4 mt-1 flex-shrink-0">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             </span>
                             <div>
@@ -452,8 +452,8 @@
             <div class="swiper testimonial-swiper pb-16 animate-fade-up" style="animation-delay: 0.2s;">
                 <div class="swiper-wrapper">
                     <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <div class="bg-secondary dark:bg-darkbg p-10 rounded-3xl h-full border border-border dark:border-white/5">
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-secondary dark:bg-darkbg p-10 rounded-3xl h-full border border-border dark:border-white/5 flex flex-col">
                             <div class="flex text-accent mb-6">
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -461,9 +461,9 @@
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                             </div>
-                            <p class="text-lg italic mb-8 leading-relaxed">"The quality is simply unmatched. The linen rompers have lasted through my first two children and still look brand new. A true luxury boutique experience."</p>
+                            <p class="text-lg italic mb-8 leading-relaxed flex-grow">"The quality is simply unmatched. The linen rompers have lasted through my first two children and still look brand new. A true luxury boutique experience."</p>
                             <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Sarah Jenkins" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Sarah Jenkins" class="w-12 h-12 rounded-full ltr:mr-4 rtl:ml-4 object-cover">
                                 <div>
                                     <h3 class="mb-0 text-base font-semibold h6">Sarah Jenkins</h3>
                                     <span class="text-xs text-muted">Mother of two</span>
@@ -472,8 +472,8 @@
                         </div>
                     </div>
                     <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <div class="bg-secondary dark:bg-darkbg p-10 rounded-3xl h-full border border-border dark:border-white/5">
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-secondary dark:bg-darkbg p-10 rounded-3xl h-full border border-border dark:border-white/5 flex flex-col">
                             <div class="flex text-accent mb-6">
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -481,9 +481,9 @@
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                             </div>
-                            <p class="text-lg italic mb-8 leading-relaxed">"The school uniform collection is fantastic. They look so elegant yet withstand everything my boys throw at them during recess. Highly recommend!"</p>
+                            <p class="text-lg italic mb-8 leading-relaxed flex-grow">"The school uniform collection is fantastic. They look so elegant yet withstand everything my boys throw at them during recess. Highly recommend!"</p>
                             <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Michael Chang" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Michael Chang" class="w-12 h-12 rounded-full ltr:mr-4 rtl:ml-4 object-cover">
                                 <div>
                                     <h3 class="mb-0 text-base font-semibold h6">Michael Chang</h3>
                                     <span class="text-xs text-muted">Father of twins</span>
@@ -492,8 +492,8 @@
                         </div>
                     </div>
                     <!-- Slide 3 -->
-                    <div class="swiper-slide">
-                        <div class="bg-secondary dark:bg-darkbg p-10 rounded-3xl h-full border border-border dark:border-white/5">
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-secondary dark:bg-darkbg p-10 rounded-3xl h-full border border-border dark:border-white/5 flex flex-col">
                             <div class="flex text-accent mb-6">
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -501,9 +501,9 @@
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                             </div>
-                            <p class="text-lg italic mb-8 leading-relaxed">"Their gift boxes are my go-to for baby showers. The presentation is beautiful, and the fabrics are so gentle on newborn skin. A perfect gift."</p>
+                            <p class="text-lg italic mb-8 leading-relaxed flex-grow">"Their gift boxes are my go-to for baby showers. The presentation is beautiful, and the fabrics are so gentle on newborn skin. A perfect gift."</p>
                             <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Elena Rodriguez" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Elena Rodriguez" class="w-12 h-12 rounded-full ltr:mr-4 rtl:ml-4 object-cover">
                                 <div>
                                     <h3 class="mb-0 text-base font-semibold h6">Elena Rodriguez</h3>
                                     <span class="text-xs text-muted">Aunt of three</span>
@@ -546,11 +546,11 @@
                 <div>
                     <h4 class="mb-6 font-medium text-lg tracking-wide text-dark dark:text-white">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="about.html" class="text-muted hover:text-primary transition-colors">Our Story</a></li>
-                        <li><a href="shop.html" class="text-muted hover:text-primary transition-colors">Shop All</a></li>
-                        <li><a href="size-guide.html" class="text-muted hover:text-primary transition-colors">Size Guide</a></li>
+                        <li><a href="about.html" class="text-muted hover:!text-primary transition-colors">Our Story</a></li>
+                        <li><a href="shop.html" class="text-muted hover:!text-primary transition-colors">Shop All</a></li>
+                        <li><a href="size-guide.html" class="text-muted hover:!text-primary transition-colors">Size Guide</a></li>
                         
-                        <li><a href="contact.html" class="text-muted hover:text-primary transition-colors">Contact Us</a></li>
+                        <li><a href="contact.html" class="text-muted hover:!text-primary transition-colors">Contact Us</a></li>
                     </ul>
                 </div>
                 
@@ -558,10 +558,10 @@
                 <div>
                     <h4 class="mb-6 font-medium text-lg tracking-wide text-dark dark:text-white">Collections</h4>
                     <ul class="space-y-3">
-                        <li><a href="shop.html#ages" class="text-muted hover:text-primary transition-colors">Shop by Age</a></li>
-                        <li><a href="shop.html#seasons" class="text-muted hover:text-primary transition-colors">Seasonal Lookbook</a></li>
-                        <li><a href="shop.html#school" class="text-muted hover:text-primary transition-colors">School Uniforms</a></li>
-                        <li><a href="shop.html#gifts" class="text-muted hover:text-primary transition-colors">Gift Sets</a></li>
+                        <li><a href="shop.html#ages" class="text-muted hover:!text-primary transition-colors">Shop by Age</a></li>
+                        <li><a href="shop.html#seasons" class="text-muted hover:!text-primary transition-colors">Seasonal Lookbook</a></li>
+                        <li><a href="shop.html#school" class="text-muted hover:!text-primary transition-colors">School Uniforms</a></li>
+                        <li><a href="shop.html#gifts" class="text-muted hover:!text-primary transition-colors">Gift Sets</a></li>
                     </ul>
                 </div>
                 
@@ -579,7 +579,7 @@
             <!-- Bottom Bar -->
             <div class="border-t border-border dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-muted">
                 <p class="text-xs">&copy; 2026 Sprout. All rights reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
+                <div class="flex gap-6 mt-4 md:mt-0">
                     <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
                     <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
                 </div>

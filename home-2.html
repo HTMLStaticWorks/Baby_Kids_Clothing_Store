@@ -56,7 +56,7 @@
                     </a>
                 </div>
 
-                <div class="hidden lg:flex space-x-8 items-center">
+                <div class="hidden xl:flex gap-8 items-center">
                     <a href="index.html" class="text-sm font-medium hover:text-primary transition-colors">Home</a>
                     <a href="home-2.html" class="text-sm font-medium hover:text-primary transition-colors text-primary">Home 2</a>
                     <a href="about.html" class="text-sm font-medium hover:text-primary transition-colors">About</a>
@@ -65,7 +65,7 @@
                     <a href="contact.html" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
                 </div>
 
-                <div class="hidden lg:flex items-center space-x-6">
+                <div class="hidden xl:flex items-center gap-6">
                     <button class="open-search-btn text-dark dark:text-white hover:text-primary transition-colors">
                         <svg class="w-5 h-5 rtl-flip pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                     </button>
@@ -83,10 +83,10 @@
                     <button class="rtl-toggle text-sm font-medium text-dark dark:text-white hover:text-primary transition-colors">
                         RTL
                     </button>
-                    <a href="login.html" class="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-medium hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 border border-primary hover:bg-transparent hover:text-primary ml-4">Login</a>
+                    <a href="login.html" class="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-medium hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 border border-primary hover:bg-transparent hover:text-primary ltr:ml-4 rtl:mr-4">Login</a>
                 </div>
 
-                <div class="lg:hidden flex items-center space-x-4">
+                <div class="xl:hidden flex items-center space-x-4">
                     <button id="menu-toggle" class="text-dark dark:text-white p-2">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
@@ -138,23 +138,23 @@
     <!-- Hero Section (Premium 2-Column Layout) -->
     <section class="relative min-h-screen flex items-center bg-secondary dark:bg-darkbg pt-20 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 lg:py-0">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+            <div class="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 
                 <!-- Left Content -->
-                <div class="max-w-2xl text-center lg:text-left z-20 relative order-2 lg:order-1 mt-12 lg:mt-0 animate-fade-up">
+                <div class="max-w-2xl text-center lg:text-start z-20 relative mt-12 lg:mt-0 animate-fade-up">
                     <span class="text-primary font-medium tracking-widest uppercase text-sm mb-4 block">Premium Collection 2026</span>
                     <h1 class="mb-6 text-dark dark:text-white">Designed For Growing Smiles</h1>
                     <p class="text-muted text-lg lg:text-xl mb-10 max-w-xl mx-auto lg:mx-0">
                         Discover premium clothing thoughtfully designed for babies and children, combining comfort, quality, and timeless style for every season.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start">
                         <a href="shop.html" class="btn-primary">Shop Collection</a>
                         <a href="about.html" class="btn-secondary bg-transparent border-dark dark:border-white text-dark dark:text-white hover:bg-dark dark:hover:bg-white hover:text-white dark:hover:text-dark transition-colors">Discover Our Story</a>
                     </div>
                 </div>
 
                 <!-- Right Image -->
-                <div class="w-full h-[50vh] lg:h-[calc(100vh-140px)] z-10 relative overflow-hidden rounded-2xl lg:rounded-3xl lg:rounded-tl-[150px] lg:rounded-bl-[150px] order-1 lg:order-2 animate-fade-up" style="animation-delay: 0.2s;">
+                <div class="w-full h-[50vh] lg:h-[calc(100vh-140px)] z-10 relative overflow-hidden rounded-2xl lg:rounded-3xl ltr:lg:rounded-tl-[150px] ltr:lg:rounded-bl-[150px] rtl:lg:rounded-tr-[150px] rtl:lg:rounded-br-[150px] animate-fade-up" style="animation-delay: 0.2s;">
                     <img src="assets/img/luxury_kids_fashion.png" alt="Premium Kids Fashion" class="absolute inset-0 w-full h-full object-cover">
                 </div>
 
@@ -276,41 +276,41 @@
                 <p class="text-muted mt-4 max-w-2xl mx-auto">Our most loved pieces, favored by parents for their enduring quality and timeless design.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
                 <!-- Large Featured Product -->
-                <div class="lg:col-span-2 group relative h-[500px] rounded-3xl overflow-hidden hover-fabric-lift animate-fade-up">
+                <div class="lg:col-span-2 group relative h-[350px] sm:h-[450px] lg:h-[500px] rounded-3xl overflow-hidden hover-fabric-lift animate-fade-up">
                     <img src="https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-8 w-full flex justify-between items-end">
-                        <div class="text-white">
-                            <span class="bg-primary/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3 inline-block">Best Seller</span>
-                            <h3 class="text-3xl font-serif mb-2">The Heritage Collection</h3>
-                            <p class="text-white/80 max-w-md">Knitted sets designed to be passed down through generations.</p>
+                    <div class="absolute bottom-0 inset-x-0 p-5 sm:p-6 lg:p-8 w-full flex flex-col sm:flex-row sm:justify-between items-start sm:items-end gap-4">
+                        <div class="text-white text-start">
+                            <span class="bg-primary/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-2 sm:mb-3 inline-block">Best Seller</span>
+                            <h3 class="text-2xl sm:text-3xl font-serif mb-2">The Heritage Collection</h3>
+                            <p class="text-white/80 max-w-md text-sm sm:text-base">Knitted sets designed to be passed down through generations.</p>
                         </div>
-                        <a href="shop.html" class="bg-white text-dark w-12 h-12 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors shrink-0 shadow-lg">
-                            <svg class="w-5 h-5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        <a href="shop.html" class="bg-white text-dark w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors shrink-0 shadow-lg self-end sm:self-auto">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </a>
                     </div>
                 </div>
                 
                 <!-- Stacked Products -->
-                <div class="flex flex-col gap-8 animate-fade-up" style="animation-delay: 0.2s;">
+                <div class="grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-8 animate-fade-up" style="animation-delay: 0.2s;">
                     <!-- Sub item 1 -->
-                    <div class="relative h-[234px] rounded-3xl overflow-hidden group hover-fabric-lift">
+                    <div class="relative h-[220px] sm:h-[300px] lg:h-[234px] rounded-3xl overflow-hidden group hover-fabric-lift">
                         <img src="assets/img/winterpuffer.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 p-6 w-full text-white">
-                            <h4 class="text-xl font-medium mb-1">Winter Puffer</h4>
-                            <span class="font-bold">$110.00</span>
+                        <div class="absolute bottom-0 inset-x-0 p-4 sm:p-6 w-full text-white text-start">
+                            <h4 class="text-base sm:text-xl font-medium mb-1 line-clamp-1">Winter Puffer</h4>
+                            <span class="font-bold text-sm sm:text-base">$110.00</span>
                         </div>
                     </div>
                     <!-- Sub item 2 -->
-                    <div class="relative h-[234px] rounded-3xl overflow-hidden group hover-fabric-lift">
+                    <div class="relative h-[220px] sm:h-[300px] lg:h-[234px] rounded-3xl overflow-hidden group hover-fabric-lift">
                         <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 p-6 w-full text-white">
-                            <h4 class="text-xl font-medium mb-1">Cotton Knit Set</h4>
-                            <span class="font-bold">$85.00</span>
+                        <div class="absolute bottom-0 inset-x-0 p-4 sm:p-6 w-full text-white text-start">
+                            <h4 class="text-base sm:text-xl font-medium mb-1 line-clamp-1">Cotton Knit Set</h4>
+                            <span class="font-bold text-sm sm:text-base">$85.00</span>
                         </div>
                     </div>
                 </div>
@@ -322,14 +322,14 @@
     <section class="py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="animate-fade-up">
+                <div class="animate-fade-up flex flex-col items-center lg:items-start text-center lg:text-start">
                     <span class="text-primary font-medium tracking-widest uppercase text-sm mb-4 block">Our Commitment</span>
                     <h2 class="text-4xl font-serif mb-6">Gentle On Skin,<br>Kind To Earth.</h2>
                     <p class="text-muted text-lg mb-8 leading-relaxed">We source only the finest organic cotton, sustainable bamboo, and premium merino wool. Our fabrics are hypoallergenic, breathable, and pre-washed for ultimate softness.</p>
                     
-                    <div class="space-y-6">
+                    <div class="space-y-6 text-start w-full max-w-md lg:max-w-none">
                         <div class="flex items-start">
-                            <div class="w-12 h-12 bg-secondary dark:bg-darkcard rounded-full flex items-center justify-center shrink-0 mr-4">
+                            <div class="w-12 h-12 bg-secondary dark:bg-darkcard rounded-full flex items-center justify-center shrink-0 ltr:mr-4 rtl:ml-4">
                                 <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             </div>
                             <div>
@@ -338,7 +338,7 @@
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="w-12 h-12 bg-secondary dark:bg-darkcard rounded-full flex items-center justify-center shrink-0 mr-4">
+                            <div class="w-12 h-12 bg-secondary dark:bg-darkcard rounded-full flex items-center justify-center shrink-0 ltr:mr-4 rtl:ml-4">
                                 <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                             </div>
                             <div>

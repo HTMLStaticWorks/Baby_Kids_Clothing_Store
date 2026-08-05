@@ -124,7 +124,7 @@ if (typeof Swiper !== 'undefined') {
     });
 
     const newArrivalsSwiper = new Swiper('.new-arrivals-swiper', {
-        slidesPerView: 1.2,
+        slidesPerView: 1,
         spaceBetween: 20,
         navigation: {
             nextEl: '.swiper-btn-next',
@@ -132,7 +132,7 @@ if (typeof Swiper !== 'undefined') {
         },
         breakpoints: {
             768: {
-                slidesPerView: 2.2,
+                slidesPerView: 2,
                 spaceBetween: 30,
             },
             1024: {
